@@ -51,7 +51,7 @@ export class App {
     // effect then runs as click effect also triggers CD
     // effect polls producer if value has changed
     this.counter.set(100);
-    this.counter.set(101);
+    this.counter.set(100);
     this.counter.set(100);
     // this.counter.update((current) => 100);
     // only first call will log because after that

@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "demo": {
-      "root": "",
+      "root": ".",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
@@ -17,6 +17,7 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "assets": [],
+            "tsConfig": "tsconfig.json",
             "styles": ["src/global_styles.css"],
             "scripts": []
           },
@@ -62,7 +63,7 @@
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
+            "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": ["styles.css"],
             "scripts": [],
@@ -72,12 +73,17 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "tsConfig": ["tsconfig.app.json", "src/tsconfig.spec.json"],
             "exclude": ["**/node_modules/**"]
           }
         }
       }
     }
   },
-  "defaultProject": "demo"
+  "defaultProject": "demo",
+  "cli": {
+    "cache": {
+      "enabled": false
+    }
+  }
 }
